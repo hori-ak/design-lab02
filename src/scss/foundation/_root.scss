@@ -1,0 +1,10 @@
+@use "../global" as g;
+
+//カラー変数
+//色指定は原則 var( --colorName ) で指定する
+
+:root {
+	@each $key, $value in g.$colorSet {
+		--#{$key}: #{$value};
+	}
+}

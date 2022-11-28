@@ -1,0 +1,65 @@
+@use "../global" as g;
+
+html {
+	font-size: 46.875%;
+	color: var( --Black );
+	@include g.mq(md) {
+		font-size: 62.5%;
+	}
+}
+body {
+	-webkit-text-size-adjust: 100%;
+	font-family: 'Noto Sans CJK JP', sans-serif;
+	
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1.2;
+	@include g.mq(md) {
+		min-width: 1120px;
+	}
+}
+
+a,a:link,a:visited,a:active,a:hover {
+	color: currentColor;
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.8;
+}
+sup {
+	vertical-align: super;
+	font-size: 0.5em;
+}
+svg {
+	transform-box: fill-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	@include g.mq(md) {
+		max-width: initial;
+		height: initial;
+	}
+} 
+
+ruby {
+	text-indent: 0px;
+	> rt {
+			display: block;
+			font-size: 50%;
+			text-align: start; 
+	}
+}
+
+rt {
+	text-indent: 0px;
+	line-height: normal;
+	text-emphasis: none;
+}
+
+_::-webkit-full-page-media, _:future, :root ruby > rt {
+	zoom: 0.5;
+	font-size: -webkit-ruby-text;
+}

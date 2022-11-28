@@ -1,0 +1,33 @@
+@use "media" as g;
+
+//ホバーアクション
+@mixin hover_after_delay ($move:all, $element:false, $before:0.1s, $after:0.2s ) {
+	@include g.mq(md) {
+		@if $element == before or $element == after {
+			&::#{$element} {
+				transition: $move $after ease-in;
+			}
+			&:hover::#{$element} {
+				transition: $move $before ease-in;
+				@content;
+			}
+		}
+		@else if $element {
+			#{$element} {
+				transition: $move $after ease-in;
+			}
+			&:hover #{$element} {
+				transition: $move $before ease-in;
+				@content;
+			}
+		}
+		@else {
+			transition: $move $after ease-in;
+
+			&:hover, &:focus-visible {
+				transition: $move $before ease-in;
+				@content;
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+@mixin position ($key) {
+	&Center {
+		#{$key}: center;
+	}
+	&Start {
+		#{$key}: flex-start;
+	}
+	&End {
+		#{$key}: flex-end;
+	}
+	&Space {
+		#{$key}: space-around;
+	}
+	&Between {
+		#{$key}: space-between;
+	}
+}
+
+.u-flex {
+
+	&-content {
+		@include position('justify-content');
+	}
+	
+	&-align {
+		@include position('align-items');
+	}
+	&-direct {
+		&Col {
+			flex-direction: column;
+			&Revs {
+				flex-direction: column-reverse;
+			}
+		}
+		&Row {
+			flex-direction: row;
+			&Revs {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}

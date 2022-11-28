@@ -1,0 +1,31 @@
+@use "../settings" as g;
+
+@mixin outputUtilityClass( $map, $prefix, $property ) {
+	$use: map-get( $map, use );
+	$i: map-get( $map, start );
+	$interval: map-get( $map, interval );
+	$end: map-get( $map, end );
+	$unit: map-get( $map, unit );
+	$media: map-get( $map, media );
+	
+	@if $use {
+		@while $i <=$end {
+			.#{$prefix}#{ $i } {
+				#{$property}: $unit * $i;
+			}
+
+			@if $media {
+				@each $key, $value in g.$breakpoints {
+					@media #{ $value } {
+						.#{$prefix}#{ $i }-#{$key} {
+							#{$property}: $unit * $i;
+						}
+					}
+				}
+			}
+
+			$i: $i + $interval;
+		}
+	}
+	
+}

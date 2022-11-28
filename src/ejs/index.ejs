@@ -1,0 +1,196 @@
+<%
+const global = {
+	breakPoint: 767,
+};
+
+const baseMeta = {
+	title: 'Design Lab',
+	description: 'ディスクリプション',
+	url: '',
+	site_name: '',
+	ogImage: '',
+	favicon: { 
+		1616: '',
+		svg: '',
+		apple: '',
+	},
+};
+%><%- include( 'template-parts/_header',{ baseMeta } ) %>
+
+<div id="top" class="l-content">
+
+<div class="l-content__inner">
+
+<!-- DESIGN LAB STORAGE -->
+<section class="p-concept">
+<!-- 片付けたくなる家づくり〜ストレスフリーな暮らし -->
+	<div class="p-concept__inner">
+
+	</div>
+
+</section>
+<!-- //DESIGN LAB STORAGE -->
+
+<!-- デザインラボコンテスト受賞歴 -->
+<section id="award" class="p-award">
+	<div class="p-award__inner">
+
+	</div>
+</section>
+<!-- //デザインラボコンテスト受賞歴 -->
+
+<!-- 想像のその先へ -->
+<section class="p-about-us">
+	<div class="p-about-us__inner">
+
+	</div>
+</section>
+<!-- //想像のその先へ -->
+
+<!-- 事例 -->
+<section id="scene" class="p-scene">
+	<div class="p-scene__inner">
+		<h2 class="c-heading ">SCENE</h2>
+		<ol class="c-scene-list">
+
+			<!-- 事例 この部分をコピーして使う　-->
+			<li class="c-scene-list__item">
+				<figure class="c-scene-list__main-images">
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+				</figure>
+				<div class="c-scene-list__content">
+					<h3 class="c-scene-list__heading">ーーーー</h3>
+					<div class="c-scene-list__text">
+						<p class="c-scene-list__catth">ーーーーーーーーーーーーーー</p>
+						<p></p>
+						<p></p>
+					</div>
+				</div>
+				<ul class="c-media-list">
+					<li class="c-media-list__item">
+						<figure class="c-media-list__image">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+						</figure>
+						<div class="c-media-list__text">
+							<p></p>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<!-- 事例 -->
+
+		</ol>
+
+	</div>
+
+</section>
+<!-- //事例 -->
+
+<!-- Design Lab -->
+<section class="p-about">
+	<div class="p-about__inner">
+		<h2 class="p-about__heading"></h2>
+		<div class="p-about__text">
+			<p></p>
+		</div>
+	</div>
+</section>
+<!-- //Design Lab -->
+
+<!-- POINT -->
+<section id="point" class="p-point">
+	<h2 class="c-heading "></h2>
+	<ol class="c-point-list">
+
+		<!-- POINT この部分をコピーして使う　-->
+		<li class="c-point-list__item">
+			<h3 class="c-point-list__heading"></h3>
+			<figure class="c-point-list__image">
+				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+			</figure>
+			<div class="c-point-list__text">
+				<p></p>
+			</div>
+		</li>
+		<!-- POINT この部分をコピーして使う　-->
+
+	</ol>
+</section>
+<!-- //POINT -->
+
+<!-- STEP -->
+<section id="step" class="p-step">
+	<div class="p-step__inner">
+		<h2 class="c-heading "></h2>
+		<ol class="c-step-list">
+
+			<!-- STEP この部分をコピーして使う　-->
+			<li class="c-step-list__item">
+				<figure class="c-step-list__icon">
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+				</figure>
+				<h3 class="c-step-list__heading"></h3>
+				<div class="c-step-list__text">
+					<p></p>
+				</div>
+			</li>
+			<!-- STEP この部分をコピーして使う　-->
+
+		</ol>
+		<!-- c-step-list -->
+
+		<div class="c-fund-plan-box">
+			<figure class="c-fund-plan-box__image">
+				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+			</figure>
+			<div class="c-fund-plan-box__text">
+				<p></p>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- //STEP -->
+
+<!-- ACCESS -->
+<section id="access" class="p-access">
+	<div class="p-access__inner">
+		<div class="p-access__content">
+
+		</div>
+		<div class="p-access__media">
+			<figure class="p-access__images">
+				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+			</figure>
+			<div class="p-access__map">
+				
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //ACCESS -->
+
+<!-- CTAボタン -->
+<div class="c-cta">
+	<div class="c-cta__button">
+		<a href=""></a>
+	</div>
+</div>
+<!-- //CTAボタン -->
+
+<!-- トップへ戻るボタン -->
+<div class="p-fix-top-button">
+	<a href="#"></a>
+</div>
+<!-- //トップへ戻るボタン -->
+
+</div>
+<!-- l-content__inner -->
+</div>
+<!-- l-content -->
+
+
+
+<%- include( 'template-parts/_footer',{ baseMeta } ) %>

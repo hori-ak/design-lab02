@@ -1,0 +1,54 @@
+@use "../global" as g;
+
+.u-disp {
+		display: block;
+}
+
+.u-none {
+		display: none;
+}
+
+.u-inline {
+	display: inline;
+}
+
+.u-ib {
+	display: inline-block;
+}
+
+.u-flex {
+		display: flex;
+}
+
+.u-grid {
+		display: grid;
+}
+
+@each $key, $value in g.$breakpoints {
+	@media #{ $value } {
+		.u-disp-#{$key} {
+			display: block;
+		}
+
+		.u-none-#{$key} {
+			display: none;
+		}
+
+		.u-inline-#{$key} {
+			display: inline;
+		}
+		
+		.u-ib-#{$key} {
+			display: inline-block;
+		}
+
+		.u-flex-#{$key} {
+			display: flex;
+		}
+
+		.u-grid-#{$key} {
+			display: grid;
+		}
+	}
+	
+}

@@ -1,0 +1,18 @@
+@use "../global" as g;
+
+@each $key, $value in g.$colorSet {
+	
+	//背景
+	.bg#{$key} {
+		background-color: var(--#{$key});
+	}
+
+	//文字色
+	.txt#{$key} {
+		color: var(--#{$key});
+	}
+	//線色
+	.bdr#{$key} {
+		border-color: var(--#{$key});
+	}
+}

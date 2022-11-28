@@ -1,0 +1,20 @@
+@use "../global" as g;
+
+@include g.outputUtilityClass( g.$u-margin, 'mt', 'margin-top');
+@include g.outputUtilityClass( g.$u-margin, 'mb', 'margin-bottom');
+@include g.outputUtilityClass( g.$u-padding, 'pt', 'padding-top');
+@include g.outputUtilityClass( g.$u-padding, 'pb', 'padding-bottom');
+
+.mAuto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@each $key, $value in g.$breakpoints {
+	@media #{ $value } {
+		.mAuto-#{$key} {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

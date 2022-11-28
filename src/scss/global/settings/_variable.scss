@@ -1,0 +1,83 @@
+//ユーティリティクラス
+//	use: 出力するかどうか
+//	start: カウントの始まり
+//	end: カウントの終わり
+//	interval: 間隔
+//	unit: 1カウントあたりの単位（単位まで入れる）
+//	media: ブレイクポイントごとに出力するかどうか
+
+$u-margin: (
+	use: true,
+	start: 0,
+	end: 200,
+	interval: 10,
+	unit: 0.1rem,
+	media: true
+);
+
+$u-padding: (
+	use: true,
+	start: 0,
+	end: 200,
+	interval: 10,
+	unit: 0.1rem,
+	media: true
+);
+
+$u-width: (
+	use: true,
+	start: 5,
+	end: 100,
+	interval: 5,
+	unit: 1%,
+	media: true
+);
+
+$u-fontSize: (
+	use: true,
+	start: 10,
+	end: 50,
+	interval: 1,
+	unit: 0.1rem,
+	media: true
+);
+
+$u-fontWeight: (
+	use: true,
+	start: 1,
+	end: 9,
+	interval: 1,
+	unit: 100,
+	media: true
+);
+
+$u-lineHeight: (
+	use: true,
+	start: 0,
+	end: 20,
+	interval: 1,
+	unit: 0.1,
+	media: true
+);
+
+$u-letterSpace: (
+	use: true,
+	start: -10,
+	end: 10,
+	interval: 1,
+	unit: 0.1,
+	media: false
+);
+
+//カラー
+$colorSet: (
+	'Main': #e26a12,
+	'White': #fff,
+	'Black': #222222,
+);
+
+//ブレイクポイント
+$breakpoints: (
+	"md": "screen and (min-width: 701px)",
+	"lg": "screen and (min-width: 1201px)"
+) !default;

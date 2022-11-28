@@ -1,0 +1,9 @@
+@use "../settings" as g;
+
+//メディアクエリ
+
+@mixin mq($breakpoint) {
+	@media #{map-get(g.$breakpoints, $breakpoint)} {
+			@content;
+	}
+}

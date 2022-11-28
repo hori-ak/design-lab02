@@ -1,0 +1,3 @@
+@use "../global" as g;
+
+@include g.outputUtilityClass( g.$u-width, 'wt', 'width');
