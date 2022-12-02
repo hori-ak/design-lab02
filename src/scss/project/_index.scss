@@ -1,1 +1,34 @@
 @use "../global" as g;
+.p-award{
+    &__inner{
+        &.--hasbg03::after{
+            @include g.bagpos(url(../images/img_gb03.png));
+            top:0px;
+            left: 0px;
+            z-index: -5;
+            width: 100%;
+            height: 300%;
+        }
+    }
+    &__image{
+        grid-template-columns: auto auto;
+    }
+}
+.p-point{
+    &__inner{
+        &.--hasbg05::before{
+            @include g.bagpos(url(../images/img_gb05.png));
+            top:-500px;
+            left: 0px;
+            z-index: -5;
+            width: 100%;
+            height: 270%;
+        }
+    }
+}
+.p-about{
+    &__inner{
+        margin-top:300px;
+        margin-bottom:300px;
+    }
+}

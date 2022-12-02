@@ -18,175 +18,696 @@ const baseMeta = {
 %><%- include( 'template-parts/_header',{ baseMeta } ) %>
 
 <div id="top" class="l-content">
-
-<div class="l-content__inner">
-
-<!-- DESIGN LAB STORAGE -->
-<section class="p-concept">
-<!-- 片付けたくなる家づくり〜ストレスフリーな暮らし -->
-	<div class="p-concept__inner">
-
-	</div>
-
-</section>
-<!-- //DESIGN LAB STORAGE -->
-
-<!-- デザインラボコンテスト受賞歴 -->
-<section id="award" class="p-award">
-	<div class="p-award__inner">
-
-	</div>
-</section>
-<!-- //デザインラボコンテスト受賞歴 -->
-
-<!-- 想像のその先へ -->
-<section class="p-about-us">
-	<div class="p-about-us__inner">
-
-	</div>
-</section>
-<!-- //想像のその先へ -->
-
-<!-- 事例 -->
-<section id="scene" class="p-scene">
-	<div class="p-scene__inner">
-		<h2 class="c-heading ">SCENE</h2>
-		<ol class="c-scene-list">
-
-			<!-- 事例 この部分をコピーして使う　-->
-			<li class="c-scene-list__item">
-				<figure class="c-scene-list__main-images">
-					<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
-					<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+	<header class="l-content-header --hasbg01">
+		<div class="l-content-header-logo u-flex">
+			<h1 class="c-content-header-logo pt20 pb20">
+				<a href="">
+					<figure class="c-content-header__image">
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'img_head-logo01', extns:'svg', w:165, h:54, alt:'', separate:true } } ) %>
+					</figure>
+				</a>
+			</h1>
+			<p class=" pt20 pb20">
+				<figure class="c-content-header__image">
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'img_head-logo02', extns:'svg', w:210, h:15, alt:'', separate:true } } ) %>
 				</figure>
-				<div class="c-scene-list__content">
-					<h3 class="c-scene-list__heading">ーーーー</h3>
-					<div class="c-scene-list__text">
-						<p class="c-scene-list__catth">ーーーーーーーーーーーーーー</p>
-						<p></p>
-						<p></p>
+			</p>
+		</div>
+		<nav class="c-content-global-nav posFixed">
+			<ul class="c-content-global-nav__list">
+				<li class="c-content-global-nav__list-item"><a href="">ホーム</a></li>
+				<li class="c-content-global-nav__list-item"><a href="">受賞歴</a></li>
+				<li class="c-content-global-nav__list-item"><a href="">事例</a></li>
+				<li class="c-content-global-nav__list-item"><a href="">6っの安心</a></li>
+				<li class="c-content-global-nav__list-item"><a href="">進め方</a></li>
+				<li class="c-content-global-nav__list-item"><a href="">アクセス</a></li>
+				<li class="c-content-global-nav__list-item"><a href="">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<article class="l-content__inner">
+		<!-- DESIGN LAB STORAGE -->
+		<section class="p-concept posRel">
+		<!-- 片付けたくなる家づくり〜ストレスフリーな暮らし -->
+			<div class="c-concept__inner u-grid sectioncenter ">
+				<div class="c-concept__inner__box01 posRel">
+					<figure class="c-concept__image pt30 ">
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'img_fv-maintext01', extns:'svg', w:570, h:270, alt:'', className:'', separate:true } } ) %>
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'img_fv-maintext02', extns:'svg', w:405, h:70, alt:'', className:'pt40', separate:true } } ) %>
+					</figure>
+				</div>
+				<div class="c-concept__inner__box02">
+					    <%- include( 'template-parts/_picture',{ global, img:{ src:'img_fv-main01', extns:'png', w:695, h:960, alt:'', className:'transXY', separate:true } } ) %>
+				</div>
+				<div class="c-concept__inner__box03">
+					<h3>収納空間を変えるだけで自分だけのおしゃれな空間に</h3>
+					<div class="c-concept__inner__box03 u-flex">
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'img_fv-main02', extns:'png', w:170, h:348, alt:'', className:'', separate:true } } ) %>
+						<p>収納は、物を片付ける。隠す。だけでなく、自慢のアイテムが見える収納でお部屋のデザイン性をUP。また、収納した物を”探さない”暮らしでストレスフリーに。でも、来客時には、プライベートを隠せる仕掛けも。快適かつ個性のある空間作りを収納ノコトから、始めましょう。</p>
 					</div>
 				</div>
-				<ul class="c-media-list">
-					<li class="c-media-list__item">
-						<figure class="c-media-list__image">
+			</div>
+			<div class="c-concept__element u-flex sectioncenter"> 
+				<div class="c-concept__element--">
+					<h3>理想の住まい造りをワンストップでご提案</h3>
+					<p>理想とする家や空間は人それぞれです。私たちは住まい造りのサポートだけでなく、お客さまそれぞれの想いや理想の暮らしを理解し、ライフスタイル全般のご提案も一緒に考えてまいります。
+						こんな家に住みたい、ネットで見たあのお部屋など、漠然としたイメージなどでも構いません。まずは私たちにお聞かせください。
+						お客さまの理想とする住まいを私たちが実現します。</p>
+				</div>
+				<div class="c-concept__element--"><%- include( 'template-parts/_picture',{ global, img:{ src:'img_fv-sub01', extns:'png', w:500, h:350, alt:'', className:'', separate:true } } ) %></div>
+			</div>
+			<div class="c-concept__element --hasbg02 u-flex u-flex-directRowRevs sectioncenter">
+				<div class="c-concept__element--">
+					<h3>デザインラボならインテリアコーディネートもまとめて</h3>
+					<p>マンションのモデルルームなどが分かり易い例ですが、モデルルームは家具や小物がセンス良く置かれとても素敵です。
+						しかし、家具等がいっさいない状態で入居すると、どのような家具を配置すればいいのか、カーテンやブラインド、ラグの色や素材はどうすればいいのか分からず、イメージしていたものと、ちょっと違う方向になってしまうこともしばしば。
+						そんなお悩みをお持ちの方へ、お部屋のコーディネートもまとめて承ります。（家具や雑貨の購入は実費を頂戴いたします）。 
+						</p>
+				</div>
+				<div class="p-concept__element--"><%- include( 'template-parts/_picture',{ global, img:{ src:'img_fv-sub02', extns:'png', w:500, h:350, alt:'', className:'', separate:true } } ) %></div>
+			</div>
+		</section>
+		<!-- //DESIGN LAB STORAGE -->
+		<!-- デザインラボコンテスト受賞歴 -->
+		<section id="award" class="p-award posRel">
+			<div class="p-award__inner --hasbg03 sectioncenter">
+				<h2 class="c-heading ">
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'img_awaed-maintext', extns:'svg', w:350, h:80, alt:'', className:'', separate:true } } ) %>
+				</h2>
+				<p>デザインラボコンテスト受賞歴</p>
+				    <table>
+					<colgroup span="4"></colgroup>
+					<tr>
+					  <th>2021年</th>
+					  <td>ジェルコリフォームコンテスト2021 デザイン部門　関東甲信越支部大会　軸組みを活かしたで賞</td>
+					</tr>
+					<tr>
+					  <th>2021年</th>
+					  <td>ジェルコリフォームコンテスト2020 デザイン部門　関東甲信越支部大会　優秀賞
+					</td>
+					</tr>
+					<tr>
+					  <th></th>
+					  <td>ジェルコリフォームコンテスト2020 デザイン部門　全国部門別優秀賞
+					</td>
+					</tr>
+					<tr>
+					  <th></th>
+					  <td>TDYリモデルスマイル作品コンテスト2020部位別部門【キッチン・リビング】審査員奨励賞</td>
+					</tr>
+				  </table>
+				  <div class="p-award__image u-grid alignCenter">
+					  <%- include( 'template-parts/_picture',{ global, img:{ src:'img_award01', extns:'jpg', w:530, h:346, alt:'', className:'', separate:true } } ) %>
+					  <%- include( 'template-parts/_picture',{ global, img:{ src:'img_award02', extns:'jpg', w:530, h:346, alt:'', className:'', separate:true } } ) %>
+				  </div>
+			</div>
+		</section>
+		<!-- //デザインラボコンテスト受賞歴 -->
+		
+		<!-- 想像のその先へ -->
+		<section class="p-about-us">
+			<div class="p-about-us__inner sectioncenter">
+				<h2 class="c-heading "><%- include( 'template-parts/_picture',{ global, img:{ src:'img_about-maintext', extns:'svg', w:500, h:83, alt:'', className:'', separate:true } } ) %>
+				</h2>
+				<p>創造のその先へ</p>
+				<p>私たちISG ReHome デザインラボが、お客さまが想像している収納の概念を変えます。</p>
+				<div class="c-about-us-list --left u-flex mb20">
+					<figure class="c-about-us-list__image">
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'img_about01', extns:'jpg', w:160, h:180, alt:'', className:'', separate:true } } ) %>
+					</figure>
+					<div class="c-about-us-list__text">
+						<h3>品川 正俊</h3>
+						<p>Masatoshi Shinagawa / Planner</p>
+						<p>店舗のデザインから始まり、住宅の大・小リノベーションを四半世紀程やらせて頂き、
+							社外のリフォームコンテストでも多数賞を頂いております。
+							「チョイ上」の素敵なお部屋をお求めの方、ぜひご相談ください、</p>
+					</div>
+				</div>
+				<div class="c-about-us-list --right u-flex">
+					<figure class="c-about-us-list__image">
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'img_about02', extns:'jpg', w:160, h:180, alt:'', className:'', separate:true } } ) %>
+					</figure>
+					<div class="c-about-us-list__text">
+						<h3>松浦 ありさ</h3>
+						<p>Arisa Matsuura / Counselor</p>
+						<p>お客様の夢や希望を共に実現していくコーディネーターになることが目標です。
+							お客様に出会えることを楽しみにしています。これからよろしくお願いいたします。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //想像のその先へ -->
+		
+		<!-- 事例 -->
+		<section id="scene" class="p-scene">
+			<div class="p-scene__inner sectioncenter">
+				<h2 class="c-heading">
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-maintext', extns:'svg', w:325, h:83, alt:'', className:'', separate:true } } ) %>
+				</h2>
+				<ol class="c-scene-list">
+					<!-- 事例 この部分をコピーして使う　-->
+					<li class="c-scene-list__item u-grid">
+						<figure class="c-scene-list__images --order2">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l01', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l02', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+						</figure>
+						<div class="c-scene-list__content --order1">
+							<figure class="c-scene-list__main-images">
+								<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-subtext01', extns:'png', w:152, h:31, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							</figure>
+							<h3 class="c-scene-list__heading">
+								キッチン
+							</h3>
+							<div class="c-scene-list__text">
+								<p class="c-scene-list__catth">「隠さずインテリアとして」ノ収納</p>
+								<p>自慢の調理家電、キッチンアイテムは、
+									隠さずインテリアとして</p>
+								<p>#キッチン　#調理家電　#キッチンアイテム
+									#隠さないインテリア</p>
+							</div>
+						</div>
+						<ul class="c-media-list --order3 u-grid">
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="c-scene-list__item u-grid">
+						<figure class="c-scene-list__images --order1">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l03', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l04', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+						</figure>
+						<div class="c-scene-list__content --order2">
+							<figure class="c-scene-list__main-images">
+								<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-subtext02', extns:'png', w:152, h:31, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							</figure>
+							<h3 class="c-scene-list__heading">
+								キッチン
+							</h3>
+							<div class="c-scene-list__text">
+								<p class="c-scene-list__catth">「隠さずインテリアとして」ノ収納</p>
+								<p>自慢の調理家電、キッチンアイテムは、
+									隠さずインテリアとして</p>
+								<p>#キッチン　#調理家電　#キッチンアイテム
+									#隠さないインテリア</p>
+							</div>
+						</div>
+						<ul class="c-media-list --order3 u-grid">
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキ仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキストスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<li class="c-scene-list__item u-grid">
+						<figure class="c-scene-list__images --order2">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l05', extns:'jpg', w:770, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+						</figure>
+						<div class="c-scene-list__content --order1">
+							<figure class="c-scene-list__main-images">
+								<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-subtext03', extns:'png', w:152, h:31, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							</figure>
+							<h3 class="c-scene-list__heading">
+								キッチン
+							</h3>
+							<div class="c-scene-list__text">
+								<p class="c-scene-list__catth">「隠さずインテリアとして」ノ収納</p>
+								<p>自慢の調理家電、キッチンアイテムは、
+									隠さずインテリアとして</p>
+								<p>#キッチン　#調理家電　#キッチンアイテム
+									#隠さないインテリア</p>
+							</div>
+						</div>
+						<ul class="c-media-list --order3 u-grid">
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="c-scene-list__item u-grid">
+						<figure class="c-scene-list__images --order1">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l06', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l07', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+						</figure>
+						<div class="c-scene-list__content --order2">
+							<figure class="c-scene-list__main-images">
+								<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-subtext04', extns:'png', w:152, h:31, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							</figure>
+							<h3 class="c-scene-list__heading">
+								キッチン
+							</h3>
+							<div class="c-scene-list__text">
+								<p class="c-scene-list__catth">「隠さずインテリアとして」ノ収納</p>
+								<p>自慢の調理家電、キッチンアイテムは、
+									隠さずインテリアとして</p>
+								<p>#キッチン　#調理家電　#キッチンアイテム
+									#隠さないインテリア</p>
+							</div>
+						</div>
+						<ul class="c-media-list --order3 u-grid">
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="c-scene-list__item u-grid">
+						<figure class="c-scene-list__images --order2">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l08', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l09', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+						</figure>
+						<div class="c-scene-list__content --order1">
+							<figure class="c-scene-list__main-images">
+								<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-subtext05', extns:'png', w:152, h:31, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							</figure>
+							<h3 class="c-scene-list__heading">
+								キッチン
+							</h3>
+							<div class="c-scene-list__text">
+								<p class="c-scene-list__catth">「隠さずインテリアとして」ノ収納</p>
+								<p>自慢の調理家電、キッチンアイテムは、
+									隠さずインテリアとして</p>
+								<p>#キッチン　#調理家電　#キッチンアイテム
+									#隠さないインテリア</p>
+							</div>
+						</div>
+						<ul class="c-media-list --order3 u-grid">
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="c-scene-list__item u-grid">
+						<figure class="c-scene-list__images --order1">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l10', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l11', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+						</figure>
+						<div class="c-scene-list__content --order2">
+							<figure class="c-scene-list__main-images">
+								<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-subtext06', extns:'png', w:152, h:31, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							</figure>
+							<h3 class="c-scene-list__heading">
+								キッチン
+							</h3>
+							<div class="c-scene-list__text">
+								<p class="c-scene-list__catth">「隠さずインテリアとして」ノ収納</p>
+								<p>自慢の調理家電、キッチンアイテムは、
+									隠さずインテリアとして</p>
+								<p>#キッチン　#調理家電　#キッチンアイテム
+									#隠さないインテリア</p>
+							</div>
+						</div>
+						<ul class="c-media-list --order3 u-grid">
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="c-scene-list__item u-grid">
+						<figure class="c-scene-list__images --order2">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l12', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-l13', extns:'jpg', w:370, h:555, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+						</figure>
+						<div class="c-scene-list__content --order1">
+							<figure class="c-scene-list__main-images">
+								<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-subtext07', extns:'png', w:152, h:31, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+							</figure>
+							<h3 class="c-scene-list__heading">
+								キッチン
+							</h3>
+							<div class="c-scene-list__text">
+								<p class="c-scene-list__catth">「隠さずインテリアとして」ノ収納</p>
+								<p>自慢の調理家電、キッチンアイテムは、
+									隠さずインテリアとして</p>
+								<p>#キッチン　#調理家電　#キッチンアイテム
+									#隠さないインテリア</p>
+							</div>
+						</div>
+						<ul class="c-media-list --order3 u-grid">
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+							<li class="c-media-list__item">
+								<figure class="c-media-list__image">
+									<%- include( 'template-parts/_picture',{ global, img:{ src:'img_scene-sub01', extns:'png', w:250, h:190, alt:'', separate:true } } ) %>
+								</figure>
+								<div class="c-media-list__text">
+									<p>仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト仮テキスト</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- 事例 -->
+				</ol>
+			</div>
+		</section>
+		<!-- //事例 -->
+		
+		<!-- Design Lab -->
+		<section class="p-about">
+			<div class="p-about__inner sectioncenter alignCenter">
+				<h2 class="p-about__heading">
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'img_designlab-logo01', extns:'svg', w:380, h:124, alt:'', className:'c-scene-list__main-image', separate:true } } ) %>
+				</h2>
+				<div class="p-about__text">
+					<p>ISG ReHome デザインラボでは、コンテストで受賞した多くの実績と経験を活かし</p>
+					<p>お客様のお部屋作りのコンセプトや趣味の所有品やアイテムから、収納についてもご提案します。</p>
+					<p>お客さまの想像を超える、新しい収納のカタチにご期待ください。</p>
+				</div>
+			</div>
+		</section>
+		<!-- //Design Lab -->
+		
+		<!-- POINT -->
+		<section id="point" class="p-point posRel">
+			<div class="p-point__inner --hasbg05 sectioncenter">
+				<figure class="c-point-list__image">
+					<%- include( 'template-parts/_picture',{ global, img:{ src:'img_point-maintext', extns:'svg', w:290, h:83, alt:'', separate:true } } ) %>
+				</figure>
+				<h2 class="c-heading ">デザインラボ6つの安心</h2>
+				<ol class="c-point-list u-grid sectioncenter">
+					<!-- POINT この部分をコピーして使う　-->
+					<li class="c-point-list__item">
+						<h3 class="c-point-list__heading"></h3>
+						<figure class="c-point-list__image">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_point01', extns:'png', w:280, h:158, alt:'', separate:true } } ) %>
+						</figure>
+						<div class="c-point-list__text">
+							<p>お客様専任のスタッフが、窓口としてご相談から完成まで一貫して担当いたしますので、スピーディーに安心してご依頼いただけます。</p>
+						</div>
+					</li>
+					<li class="c-point-list__item">
+						<h3 class="c-point-list__heading"></h3>
+						<figure class="c-point-list__image">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_point02', extns:'png', w:280, h:158, alt:'', separate:true } } ) %>
+						</figure>
+						<div class="c-point-list__text">
+							<p>お客様専任のスタッフが、窓口としてご相談から完成まで一貫して担当いたしますので、スピーディーに安心してご依頼いただけます。</p>
+						</div>
+					</li>
+					<li class="c-point-list__item">
+						<h3 class="c-point-list__heading"></h3>
+						<figure class="c-point-list__image">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_point03', extns:'png', w:280, h:158, alt:'', separate:true } } ) %>
+						</figure>
+						<div class="c-point-list__text">
+							<p>お客様専任のスタッフが、窓口としてご相談から完成まで一貫して担当いたしますので、スピーディーに安心してご依頼いただけます。</p>
+						</div>
+					</li>
+					<li class="c-point-list__item">
+						<h3 class="c-point-list__heading"></h3>
+						<figure class="c-point-list__image">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_point04', extns:'png', w:280, h:158, alt:'', separate:true } } ) %>
+						</figure>
+						<div class="c-point-list__text">
+							<p>お客様専任のスタッフが、窓口としてご相談から完成まで一貫して担当いたしますので、スピーディーに安心してご依頼いただけます。</p>
+						</div>
+					</li>
+					<li class="c-point-list__item">
+						<h3 class="c-point-list__heading"></h3>
+						<figure class="c-point-list__image">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_point05', extns:'png', w:280, h:158, alt:'', separate:true } } ) %>
+						</figure>
+						<div class="c-point-list__text">
+							<p>お客様専任のスタッフが、窓口としてご相談から完成まで一貫して担当いたしますので、スピーディーに安心してご依頼いただけます。</p>
+						</div>
+					</li>
+					<li class="c-point-list__item">
+						<h3 class="c-point-list__heading"></h3>
+						<figure class="c-point-list__image">
+							<%- include( 'template-parts/_picture',{ global, img:{ src:'img_point06', extns:'png', w:280, h:158, alt:'', separate:true } } ) %>
+						</figure>
+						<div class="c-point-list__text">
+							<p>お客様専任のスタッフが、窓口としてご相談から完成まで一貫して担当いたしますので、スピーディーに安心してご依頼いただけます。</p>
+						</div>
+					</li>
+					<!-- POINT この部分をコピーして使う　-->
+				</ol>
+			</div>
+		</section>
+		<!-- //POINT -->
+		<!-- STEP -->
+		<section id="step" class="p-step">
+			<div class="p-step__inner">
+				<h2 class="c-heading "></h2>
+				<ol class="c-step-list">
+					<!-- STEP この部分をコピーして使う　-->
+					<li class="c-step-list__item">
+						<figure class="c-step-list__icon">
 							<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
 						</figure>
-						<div class="c-media-list__text">
+						<h3 class="c-step-list__heading"></h3>
+						<div class="c-step-list__text">
 							<p></p>
 						</div>
 					</li>
-				</ul>
-			</li>
-			<!-- 事例 -->
-
-		</ol>
-
-	</div>
-
-</section>
-<!-- //事例 -->
-
-<!-- Design Lab -->
-<section class="p-about">
-	<div class="p-about__inner">
-		<h2 class="p-about__heading"></h2>
-		<div class="p-about__text">
-			<p></p>
-		</div>
-	</div>
-</section>
-<!-- //Design Lab -->
-
-<!-- POINT -->
-<section id="point" class="p-point">
-	<h2 class="c-heading "></h2>
-	<ol class="c-point-list">
-
-		<!-- POINT この部分をコピーして使う　-->
-		<li class="c-point-list__item">
-			<h3 class="c-point-list__heading"></h3>
-			<figure class="c-point-list__image">
-				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
-			</figure>
-			<div class="c-point-list__text">
-				<p></p>
-			</div>
-		</li>
-		<!-- POINT この部分をコピーして使う　-->
-
-	</ol>
-</section>
-<!-- //POINT -->
-
-<!-- STEP -->
-<section id="step" class="p-step">
-	<div class="p-step__inner">
-		<h2 class="c-heading "></h2>
-		<ol class="c-step-list">
-
-			<!-- STEP この部分をコピーして使う　-->
-			<li class="c-step-list__item">
-				<figure class="c-step-list__icon">
-					<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
-				</figure>
-				<h3 class="c-step-list__heading"></h3>
-				<div class="c-step-list__text">
-					<p></p>
+					<!-- STEP この部分をコピーして使う　-->
+		
+				</ol>
+				<!-- c-step-list -->
+		
+				<div class="c-fund-plan-box">
+					<figure class="c-fund-plan-box__image">
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+					</figure>
+					<div class="c-fund-plan-box__text">
+						<p></p>
+					</div>
 				</div>
-			</li>
-			<!-- STEP この部分をコピーして使う　-->
-
-		</ol>
-		<!-- c-step-list -->
-
-		<div class="c-fund-plan-box">
-			<figure class="c-fund-plan-box__image">
-				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
-			</figure>
-			<div class="c-fund-plan-box__text">
-				<p></p>
+		
+			</div>
+		</section>
+		<!-- //STEP -->
+		
+		<!-- ACCESS -->
+		<section id="access" class="p-access">
+			<div class="p-access__inner">
+				<div class="p-access__content">
+		
+				</div>
+				<div class="p-access__media">
+					<figure class="p-access__images">
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+						<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
+					</figure>
+					<div class="p-access__map">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //ACCESS -->
+		
+		<!-- CTAボタン -->
+		<div class="c-cta">
+			<div class="c-cta__button">
+				<a href=""></a>
 			</div>
 		</div>
-
-	</div>
-</section>
-<!-- //STEP -->
-
-<!-- ACCESS -->
-<section id="access" class="p-access">
-	<div class="p-access__inner">
-		<div class="p-access__content">
-
+		<!-- //CTAボタン -->
+		
+		<!-- トップへ戻るボタン -->
+		<div class="p-fix-top-button">
+			<a href="#"></a>
 		</div>
-		<div class="p-access__media">
-			<figure class="p-access__images">
-				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
-				<%- include( 'template-parts/_picture',{ global, img:{ src:'-----', extns:'jpg', w:170, h:348, alt:'', separate:true } } ) %>
-			</figure>
-			<div class="p-access__map">
-				
-			</div>
-		</div>
+	<!-- //トップへ戻るボタン -->
+	
 	</div>
-</section>
-<!-- //ACCESS -->
-
-<!-- CTAボタン -->
-<div class="c-cta">
-	<div class="c-cta__button">
-		<a href=""></a>
-	</div>
-</div>
-<!-- //CTAボタン -->
-
-<!-- トップへ戻るボタン -->
-<div class="p-fix-top-button">
-	<a href="#"></a>
-</div>
-<!-- //トップへ戻るボタン -->
-
-</div>
 <!-- l-content__inner -->
 </div>
 <!-- l-content -->

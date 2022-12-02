@@ -36,7 +36,6 @@ svg {
 }
 
 img {
-	max-width: 100%;
 	height: auto;
 	@include g.mq(md) {
 		max-width: initial;
@@ -62,4 +61,7 @@ rt {
 _::-webkit-full-page-media, _:future, :root ruby > rt {
 	zoom: 0.5;
 	font-size: -webkit-ruby-text;
+}
+body{
+	counter-reset: section;
 }

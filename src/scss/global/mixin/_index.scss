@@ -1,3 +1,12 @@
 @forward "media";
 @forward "hover";
 @forward "utility";
+
+@mixin bagpos($position_img){
+    content: "";
+    background-image: ($position_img);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-position: bottom;
+    background-size: 100% auto;
+}

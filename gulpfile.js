@@ -59,7 +59,7 @@ const sass = () => {
     }))
     .pipe(gulpPostcss([cssSorter({order: 'smacss'})]))
     .pipe(mediaQueries())
-    .pipe(mode.development(sourcemaps.write()))
+    // .pipe(mode.development(sourcemaps.write()))
     .pipe(mode.production(cleanCSS()))
     .pipe(gulp.dest(distPath.css))
 }

@@ -71,13 +71,13 @@ $u-letterSpace: (
 
 //カラー
 $colorSet: (
-	'Main': #e26a12,
+	'Main': #e9e4e1,
 	'White': #fff,
 	'Black': #222222,
 );
 
 //ブレイクポイント
 $breakpoints: (
-	"md": "screen and (min-width: 701px)",
-	"lg": "screen and (min-width: 1201px)"
+	"md": "screen and (max-width: 767px)",
+	"lg": "screen and (min-width: 1201px)",
 ) !default;
