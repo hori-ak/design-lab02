@@ -1,14 +1,43 @@
 @use "../global" as g;
-.c-content-global-nav{
-    right:10px;
-    top:10px;
-    &__list-item{
-        writing-mode: vertical-rl;
-        padding:10px;
+.c-content{
+    &-global-nav{
+        right: calc(50% - 680px);
+        top:10px;
+        z-index:20;
+        &__list{
+            @include g.flexcolumn;
+            justify-content: space-around;
+            height:100vh;
+            align-items:center;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+        &__list-item{
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            padding:10px;
+        }
+    }
+    &-header{
+        &-logotext{
+            @include g.mq(lg){
+                padding-left: 6rem;
+            }
+        }
     }
 }
 .c-concept{
+    &__element-h3{
+        @include g.mq(md){
+            font-size:2rem;
+        }
+    }
     &__element{
+        @include g.mq(md){
+            flex-direction: column;
+            font-size:1.5rem;
+        }
         &.--hasbg02::after{
             @include g.bagpos(url(../images/img_gb02.png));
             bottom:-1px;
@@ -17,102 +46,675 @@
             height: 100%;
             z-index: -5;
         }
+
+        &.--text01{
+            @include g.mq(lg){
+                padding-right:20px;
+            }
+        }
+        &.--text02{
+            @include g.mq(lg){
+                padding-left:40px;
+                align-self:center;
+
+            }
+        }
     }
     &__inner{
-        grid-template-columns: 500px auto;
-        grid-template-rows: 500px auto;
+        @include g.mq(lg){
+            grid-template-columns:460px auto;
+            grid-template-rows: 475px auto;
+        }
+        @include g.mq(md){
+            grid-template-columns:auto;
+            grid-template-rows:auto auto auto;
+        }
         &__box01{
-          grid-row: 1 / 2;
-          grid-column: 1 / 2;
+            @include g.mq(lg){
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+            @include g.mq(md){
+                margin-top:65px;
+            }
         }
         &__box02{
-            grid-row: 1 / 3;
-            grid-column: 2 / 3;
+            @include g.mq(lg){
+                grid-row: 1 / 3;
+                grid-column: 2 / 3;
+            }
         }
         &__box03{
-            grid-row: 2 / 3;
-            grid-column: 1 / 2;
+            h3{
+                @include g.mq(md){
+                    font-size: 2rem;
+                    line-height: 1.6;
+                }
+            }
+            img{
+                max-width:150px;
+            }
+            @include g.mq(lg){
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+            align-self:center;
+            &.--text{
+                margin-top:25px;
+            }
+            p{
+                padding-left:20px;
+                @include g.mq(lg){
+                    padding-right:24px;
+                }
+                @include g.mq(md){
+                    font-size:1.5rem;
+                }
+            }
+        }
+        &__scroll{
+            position:absolute;
+            top: 55%;
+            left: -60px;
+            transform: translateY(-55%);
+            @include g.mq(md){
+                left: -7px;
+            }
         }
     }
     &__image{
-        position: absolute;
-        z-index: 10;
-    }
-}
+        @include g.mq(lg){
+            position: absolute;
+            z-index: 10;
+            padding-top:8rem;
+        }
+        @include g.mq(md){
+            display: grid;
+            padding-top: 3rem;
+        }
 
+    }
+    &__heading{
+        padding-bottom: 3rem;
+        font-size: 2.8rem;
+        @include g.mq(md){
+            font-size: 2rem;
+            line-height:1.6;
+        }
+    }
+
+}
 // ここからscene
 .c-scene-list{
+    &__catth{
+        font-weight:800;
+        font-size: 2.1rem;
+        letter-spacing: 2.5px;
+    }
     &__item{
-        grid-template-columns:auto auto;
+        @include g.mq(lg){
+            grid-template-columns:auto auto;
+            gap:25px;
+        }
+        @include g.mq(md) {
+            grid-template-columns:auto;
+            gap:1rem;
+        }
+        &.--box01{
+            @include g.mq(lg){
+                margin-top:86px;
+            }
+        }
+        &.--box02{
+            margin-top:124px;
+        }
+        &.--box03{
+            margin-top:86px;
+        }
+        &.--box04{
+            margin-top:100px;
+        }
+        &.--box05{
+            margin-top:80px;
+        }
+        &.--box06{
+            margin-top:100px;
+        }
+        &.--box07{
+            margin-top:104px;
+        }
+    }
+    &__center-text{
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    &__tag{
+        color:#846d52;
     }
     &__content{
         background-color:map-get(g.$colorSet,'White' );
         align-self: center;
         padding:4rem;
         &.--order1{
-            order:1;
-            transform: translateX(8rem);
+            @include g.mq(lg){
+                order:1;
+                margin: -5rem;
+                transform: translate(5rem, -52px);
+            }
         }
         &.--order2{
-            order:2;
-            transform: translateX(-8rem);
+            @include g.mq(lg){
+                order:2;
+                margin: -10rem;
+                transform: translate(-10rem, -52px);
+            }
         }
     }
     &__images{
-        width:770px;
+        max-width:770px;
+        display: grid;
+        grid-template-columns: auto auto;
+        @include g.mq(lg){
+            gap: 30px;
+        }
+        @include g.mq(md){
+            gap: 1rem;
+        }
+        &.--gap0{
+            gap:0;
+        }
+
         &.--order1{
-            order:1;
+            @include g.mq(lg){
+                order:1;
+            }
         }
         &.--order2{
-            order:2;
+            @include g.mq(lg){
+                order:2;
+            }
         }
+    }
+    &__heading{
+        margin-top: 6px;
+        letter-spacing: 4px;
     }
 }
 .c-media-list{
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-column: 1 / 3;
-    justify-content: space-between;
+    @include g.mq(lg){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column: 1 / 3;
+        justify-content: space-between;
+        gap:calc(1080px - 1054px);
+    }
+    @include g.mq(md){
+        gap:1rem;
+    }
+    &__item{
+    @include g.mq(md){
+            display: grid;
+            grid-template-columns: 35% auto;
+            align-items: center;
+            gap:1rem;
+     }
+    }
+    p{
+        text-align:justify;
+    }
     &.--order3{
         order:3;
+    }
+    &__text{
+        @include g.mq(lg){
+            margin-top: 10px;
+        }
+        @include g.mq(md){
+           align-self: start;
+        }
+        p{
+            @include g.mq(md){
+                line-height:1.6;
+                font-size:1.5rem;
+            }
+        }
     }
 }
 // ここまでscene
 .c-point-list{
-    grid-template-columns: 330px 330px 330px;
-    justify-content: space-between;
+    &__text{
+        @include g.mq(md){
+            font-size:1.5rem;
+        }
+    }
+    @include g.mq(md){
+        gap:3rem;
+    }
+    &__image{
+        @include g.mq(md){
+            justify-self: center;
+        }
+    }
+    @include g.mq(lg){
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:calc(1080px - 1035px);
+    }
+
+    &__heading{
+        align-self:center;
+        @include g.mq(md){
+            font-size: 1.7rem;
+            line-height: 1.5;
+        }
+    }
     &__item{
         position:relative;
         background-color: map-get(g.$colorSet,'White' );
-        padding:25px;
+        padding: 65px 25px 25px 25px ;
+        height:100%;
+        display: grid;
+        grid-auto-rows: 80px 1fr 0.8fr;
+        border:1px solid #c0b3ab;
+        @include g.mq(md){
+            justify-items: center;
+        }
         &::before{
             counter-increment: section;
             content: "0" counter(section) ;
             position:absolute;
             left:50%;
-            top:10px;
+            transform: translateX(-50%);
+            top: 20px;
             // 仮
-            font-size:3rem;
+            font-size:5rem;
             font-weight:bold;
             border-bottom:1px solid black;
+            padding-bottom:5px;
+        }
+        p{
+            margin-top: 11px;
+            line-height: 1.8;
+            text-align: justify;
+            @include g.mq(md){
+                max-width: 280px;
+            }
         }
     }
 }
 // あとで直します
 .transXY{
-    transform: translateY(-86px);
+    @include g.mq(lg){
+        transform: translateY(-100px);
+    }
+    @include g.mq(md){
+        width: 320px;
+        transform: translateX(20px);
+    }
 }
 .c-about{
     &-us-{
         &list{
-            padding: 10px;
-            border: 2px solid black;
-            max-width:1000px;
+            padding: 20px;
+            border: 2px solid #c0b3ab;
+            background-color:#fff;
+            @include g.mq(md){
+                flex-direction:column;
+            }
             &.--left{
-
+                margin-top:6rem;
+                max-width:865px;
             }
             &.--right{
-                margin-left: auto;
+                max-width: 830px;
+                @include g.mq(lg){
+                    margin-left: auto;
+                    margin-right: 8rem;
+                }
+            }
+            &__text{
+                @include g.mq(lg){
+                    padding-left:5rem;
+                }
+                p{
+                    @include g.mq(md){
+                        font-size:1.5rem;
+                        line-height:1.8;
+                    }
+                }
+            }
+            &__image{
+                @include g.mq(md){
+                    align-self:center;
+                }
             }
         }
+    }
+    &__name{
+        font-size: 2.6rem;
+        line-height: 1.5;
+        @include g.mq(md){
+            font-size: 1.8rem;
+            margin-top:1rem;
+        }
+    }
+}
+.c-cta{
+    &__button{
+        background-color:#904122;
+        color:#fff;
+        text-align:center;
+        max-width:780px;
+        margin-left:auto;
+        margin-right:auto;
+        @include g.mq(md){
+            margin-left:2rem;
+            margin-right:2rem;
+        }
+        &__text{
+            padding-left:10px;
+            line-height:4;
+            font-size: 2.5rem;
+            @include g.mq(md){
+            font-size:1.8rem;
+            }
+        }
+        &__box{
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                @include g.hover_after_delay(background-color) {
+                    background-color: rgba( 0,0,0,0.5);
+            }
+			}
+        }
+    }
+    &__illustration_pos{
+        @include g.mq(lg){
+            position:absolute;
+            top: -10px;
+            right: 120px;
+        }
+        @include g.mq(md){
+            position: fixed;
+            bottom: 60px;
+            right: 31px;
+            width:60px;
+        }
+    }
+}
+.c-heading{
+    &_bottom{
+        font-size: 3rem;
+        line-height: 1.5;
+        font-weight:700;
+        margin-top:1.5rem;
+        letter-spacing: 3.5px;
+        @include g.mq(md){
+            font-size: 2.3rem;
+        }
+    }
+}
+.c-access{
+    &_text{
+        color:#5d4122;
+    }
+}
+.c-award_tr{
+    @include g.mq(md){
+        display: grid;
+        grid-template-columns: 5em auto;
+        max-width: 780px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 1.5rem;
+        line-height: 2.2;
+    }
+}
+// 頂戴code
+.c-header {
+	&__menu-button {
+		// position: fixed;
+    // top: 10px;
+    // right: 120px;
+    z-index: 40;
+    background: none;
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		overflow: hidden;
+		width: 115px;
+		height: 115px;
+		@include g.mq(md) {
+			top: 0;
+			right: 0;
+			width: 65px;
+			height: 65px;
+            position:relative;
+		}
+		span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: center;
+			transition: transform 0.2s;
+		}
+		.--open-button {
+			transform: scale(1);
+			transform-origin: center;
+			z-index: 10;
+		} 
+		.--close-button {
+			transform: scale(0);
+			transform-origin: center;
+			z-index: 0;
+		} 
+		.is-open & {
+			// .--open-button {
+			// 	transform: scale(0);
+			// 	transform-origin: center;
+			// 	z-index: 0;
+			// } 
+			// .--close-button {
+			// 	transform: scale(1);
+			// 	transform-origin: center;
+			// 	z-index: 10;
+			// 	background-color: var(--LightGreen);
+			// 	border-radius: 50%;
+			// } 
+		}
+	}
+}
+
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -1;
+	.is-open & {
+		z-index: 5;
+	}
+}
+
+#nav {
+	position: fixed;
+	top: 0;
+	left:0;
+	z-index: 30;
+	width: 100%;
+	transition: opacity 0.2s;
+	opacity: 0;
+	pointer-events: none;
+	.is-open & {
+		opacity: 1;
+		pointer-events: initial;
+	}
+}
+
+.c-gnav {
+	background-color: #904122;
+	color: var(--White);
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-content: center;
+
+		@include g.mq(md) {
+			grid-template-columns: auto	
+		}
+	}
+
+	&__left {
+		@include g.mq(md) {
+			padding: 6rem 25% 0;
+		}
+	}
+
+	&__right {
+    padding: 9rem calc( 50% - 160px);
+		@include g.mq(md) {
+			padding: 3rem calc(50% - 160px) 2rem;
+		}
+	}
+
+	&__bottom {
+		display: grid;
+		padding: 4rem calc( 50% - 600px);
+		background-color: var(--LightGreen);
+		grid-template-columns: minmax(450px, max-content) 1fr 1fr;
+		gap: 3.5rem;
+
+		@include g.mq(md) {
+			padding: 4rem;
+			grid-template-columns: auto;
+			gap: 2rem;
+		}
+        p{
+            line-height:1;
+        }
+	}
+
+	&__phone {
+		a {
+			font-size: 4.8rem;
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			@include g.mq(md) {
+				font-size: 4.2rem;
+			}
+		}
+	}
+
+	&__button {
+		background-color: green;
+		border-radius: 50px;
+		overflow: hidden;
+		font-size: 2.6rem;
+		text-align: center;
+		font-weight: 700;
+		&.--inversion {
+			background-color: var(--White);
+			color: green;
+		}
+		a {
+			display: block;
+			padding: 0.75em;
+		}
+
+	}
+}
+
+.c-gnav-list {
+	font-size: 2.6rem;
+	font-weight: 700;
+
+	&__item {
+		padding: 1rem;
+		@include g.mq(md){
+			padding: initial;
+			a {
+				display: block;
+				padding: 1rem;
+				@include g.mq(md) {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+}
+.c-gnav{
+    @include g.mq(lg){
+        display:none;
+    }
+}
+@include g.mq(lg){
+    .sp-oniy{
+        display:none;
+    }
+}
+// ヘッダーメニュー
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background: #fff;
+  	width: 45%;
+    z-index: 100;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.is-open{
+    .openbtn span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+    
+    .openbtn span:nth-of-type(2) {
+        opacity: 0;/*真ん中の線は透過*/
+    }
+    
+    .openbtn span:nth-of-type(3){
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
     }
 }

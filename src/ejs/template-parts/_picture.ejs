@@ -1,9 +1,8 @@
 <%
-const alt = img.alt ? ` alt="${img.alt}"` : ``;
+const alt = img.alt ? ` alt="${img.alt}"` : ` alt=""`;
 const className = img.className ? ` class="${img.className}"` : ``;
 const loading = img.loading ? ` loading="${img.loading}"` : ` loading="lazy"`;
 const decoding = img.decoding ? ` decoding="${img.decoding}"` : ` decoding="async"`;
-
 const imageSetSP = !img.separate ? '' :`\<source media="(max-width: ${global.breakPoint}px)" srcset="images/${img.src}-sp.${img.extns}">`;
 const imageSetPC = `\<img src="images/${img.src}.${img.extns}" width="${img.w}" height="${img.h}"${className}${alt}${loading}${decoding}>`;
 %><picture><%- imageSetSP + imageSetPC  %></picture>

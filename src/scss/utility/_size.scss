@@ -3,11 +3,29 @@
 @include g.outputUtilityClass( g.$u-width, 'wt', 'width');
 @mixin sectioncenter{
     @include g.mq(lg) {
-        max-width: 1200px;
+        min-width: 1080px;
+        width: 1080px;
         margin-left:auto;
         margin-right:auto;
+    }
+    @include g.mq(md){
+        max-width:100%;
+    }
 }
+@mixin sectioncenterfv{
+    @include g.mq(lg) {
+        min-width: 1160px;
+        width: 1160px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    @include g.mq(md){
+        max-width:100%; 
+    }
 }
 .sectioncenter{
     @include sectioncenter
+}
+.sectioncenterfv{
+    @include sectioncenterfv
 }

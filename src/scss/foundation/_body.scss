@@ -4,7 +4,7 @@ html {
 	font-size: 46.875%;
 	color: var( --Black );
 	@include g.mq(md) {
-		font-size: 62.5%;
+		font-size: 54.6785%;
 	}
 }
 body {
@@ -14,9 +14,12 @@ body {
 	font-size: 1.6rem;
 	font-weight: 500;
 	line-height: 1.2;
-	@include g.mq(md) {
-		min-width: 1120px;
-	}
+	// @include g.mq(md) {
+	// 	min-width: 1120px;
+	// }
+}
+iframe{
+	max-width:100%;
 }
 
 a,a:link,a:visited,a:active,a:hover {
@@ -25,7 +28,31 @@ a,a:link,a:visited,a:active,a:hover {
 }
 
 p {
-	line-height: 1.8;
+	line-height: 2;
+	font-weight: 400;
+	@include g.mq(lg) {
+		font-size:2rem;
+	}
+}
+tr{
+	line-height: 2.2;
+	font-weight: 400;
+	@include g.mq(lg) {
+		font-size:2rem;
+	}
+}
+th{
+	@include g.mq(lg) {
+		padding-right:30px;
+		padding-left:10px;
+	}
+
+}
+h3{
+	@include g.mq(lg) {
+		font-size:3rem;
+		line-height:1.5;
+	}
 }
 sup {
 	vertical-align: super;
@@ -40,6 +67,7 @@ img {
 	@include g.mq(md) {
 		max-width: initial;
 		height: initial;
+		max-width: 100%;
 	}
 } 
 
@@ -64,4 +92,23 @@ _::-webkit-full-page-media, _:future, :root ruby > rt {
 }
 body{
 	counter-reset: section;
+}
+html {
+    scroll-behavior: smooth;
+}
+section{
+	@include g.mq(md){
+		padding-left:2rem;
+		padding-right:2rem;
+	}
+}
+.sp-only{
+	@include g.mq(lg){
+		display: none;
+	}
+}
+.pc-only{
+	@include g.mq(md){
+		display: none;
+	}
 }

@@ -1,0 +1,94 @@
+@use "../global" as g;
+
+.c-step-list {
+	position: relative;
+	&::before {
+		content: "";
+		display: block;
+    z-index: 0;
+    position: absolute;
+    top: 1%;
+    left: 63px;
+    height: 98%;
+	@include g.mq(md){
+	height:90%;
+	left:15%;
+	}
+    border-left: 5px dotted var(--Black);
+	}
+	&__item {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: 130px 130px auto;
+		align-items: center;
+		column-gap: 30px;
+		@include g.mq(md){
+			grid-template-columns: 12rem auto;
+			column-gap: 2rem;
+		}
+	}
+
+	&__heading {
+		font-size: 1.8rem;
+		line-height: 1.8;
+
+		@include g.mq(md){
+			display:grid;
+		}
+		span {
+			display: inline-block;
+			line-height: 1.5;
+		}
+	}
+
+	&__text {
+		position: relative;
+		@include g.mq(lg){
+			padding-left: 30px;
+		}
+		font-size: 1.5rem;
+		line-height: 1.5;
+		@include g.mq(md){
+			font-size:1.4rem;
+		}
+
+		&::before {
+			@include g.mq(lg){
+				content: '';
+				position: absolute;
+				left: 0;
+				top: calc( 50% - 35px);
+				display: block;
+				border-left: 1px solid var(--Black);
+				min-height: 70px;
+			}
+		}
+	}
+	&__heading-text{
+		font-size: 2.2rem;
+        line-height: 1.3;
+        font-weight: 800;
+	}
+	&__icon{
+		grid-row: 1/3;
+        align-self: baseline;
+	}
+}
+
+.c-fund-plan-box {
+	display: grid;
+	grid-template-columns: 250px auto;
+	align-items: center;
+	gap: 30px;
+	padding: 25px 35px;
+	background-color: var(--White);
+	border: 1px solid #c0b3ab;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	@include g.mq(md){
+		grid-template-columns: auto;
+		gap: 10px;
+
+	}
+}

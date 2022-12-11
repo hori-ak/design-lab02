@@ -24,6 +24,16 @@
 		text-align: justify
 	}
 }
+.borderBL_bt-concept{
+	border-bottom:2px solid black;
+	padding-bottom:13px;
+	margin-bottom:15px;
+}
+.borderBL_bt{
+	border-bottom:2px solid black;
+	padding-bottom:18px;
+	margin-bottom:15px;
+}
 
 @each $key, $value in g.$breakpoints {
 	@media #{ $value } {

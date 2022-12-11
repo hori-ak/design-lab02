@@ -31,3 +31,17 @@
 		}
 	}
 }
+@mixin hover_effect () {
+	transition: 0.2s;
+
+	&:hover, &:focus-visible {
+		@content;
+	}
+}
+
+.button {
+	background: #000;
+	@include hover_effect() {
+		background: #666;
+	} 
+}
