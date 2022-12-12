@@ -19,7 +19,7 @@ const baseMeta = {
 
 <div id="top" class="l-content">
 	<header class="l-content-header --hasbg01">
-		<div class="l-content-header-logo u-flex"id="menu-btn">
+		<div class="l-content-header-logo u-flex">
 			<h1 class="c-content-header-logo">
 				<a href="">
 					<figure class="c-content-header__image">
@@ -72,7 +72,8 @@ const baseMeta = {
 			</div>
 		</div>
 		<div class="c-gnav__bottom">
-			<p class="c-gnav__phone"><a href="te:047-333-1151"><svg viewBox="0 0 45 50" width="45" height="50"><use xlink:href="#icon-phone"></use></svg>047-333-1151</a></p>
+			<p class="c-gnav__phone"><a href="te:047-333-1151"><%- include( 'template-parts/_picture',{ global, img:{ src:'img_tel', extns:'svg', w:35, h:35, alt:'', className:'', separate:false } } ) %>
+				047-333-1151</a></p>
 			<p class="c-gnav__button"><a href="">お問い合わせ</a></p>
 			<p class="c-gnav__button --inversion"><a href="#access">アクセス</a></p>
 		</div>
@@ -118,7 +119,7 @@ const baseMeta = {
 			<div class="c-concept__element --hasbg02 u-flex u-flex-directRowRevs sectioncenter mt130-lg pt40-md">
 				<div class="c-concept__element --text02">
 					<h3 class="c-concept__heading">デザインラボなら<br>インテリアコーディネートもまとめて</h3>
-					<p class="c-concept__element">マンションのモデルルームなどが分かり易い例ですが、モデルルームは家具や小物がセンス良く置かれとても素敵です。<br>
+					<p class="c-concept__element --text03">マンションのモデルルームなどが分かり易い例ですが、モデルルームは家具や小物がセンス良く置かれとても素敵です。<br>
 						しかし、家具等がいっさいない状態で入居すると、どのような家具を配置すればいいのか、カーテンやブラインド、ラグの色や素材はどうすればいいのか分からず、イメージしていたものと、ちょっと違う方向になってしまうこともしばしば。
 						そんなお悩みをお持ちの方へ、お部屋のコーディネートもまとめて承ります。（家具や雑貨の購入は実費を頂戴いたします）。 
 						</p>
@@ -182,9 +183,10 @@ const baseMeta = {
 					<div class="c-about-us-list__text">
 						<h3 class="c-about__name">品川 正俊</h3>
 						<p class="lh15">Masatoshi Shinagawa / Planner</p>
-						<p class="mt20">店舗のデザインから始まり、住宅の大・小リノベーションを四半世紀程やらせて頂き、<br>
-							社外のリフォームコンテストでも多数賞を頂いております。<br>
-							「チョイ上」の素敵なお部屋をお求めの方、ぜひご相談ください、</p>
+						<p class="mt20">風抜けの良い多彩な間取りとインダストリアルデザインが秀逸。<br>
+							リノベーションに関連する数多くの資格を有し、全国規模の住宅・店舗デザインコンテストで名誉ある賞を10作品以上受賞。<br>
+							お客様の想像を超えるデザインと仕掛けで、唯一無二のリノベーションをご提供いたします。
+							</p>
 					</div>
 				</div>
 				<div class="c-about-us-list --right u-flex">
@@ -194,8 +196,8 @@ const baseMeta = {
 					<div class="c-about-us-list__text">
 						<h3 class="c-about__name">松浦 ありさ</h3>
 						<p class="lh15">Arisa Matsuura / Counselor</p>
-						<p class="mt20">お客様の夢や希望を共に実現していくコーディネーターになることが目標です。<br>
-							お客様に出会えることを楽しみにしています。これからよろしくお願いいたします。</p>
+						<p class="mt20">リノベーションのプランだけでなく、資金計画や物件探しなどの不安を一つ一つ解消し、お客様の理想の暮らしを提供いたします。お気軽にご相談ください。<br>
+							お客様の想像を超える発想と知識で、一人ひとりのご希望やわがままを私が形に変えてみせます。</p>
 					</div>
 				</div>
 			</div>
@@ -722,7 +724,7 @@ const baseMeta = {
 						<figure class="c-step-list__icon">
 							<%- include( 'template-parts/_picture',{ global, img:{ src:'ico_step03', extns:'svg', w:130, h:130, alt:'', separate:false } } ) %>
 						</figure>
-						<h3 class="c-step-list__heading"><%- include( 'template-parts/_picture',{ global, img:{ src:'heading_step03', extns:'svg', w:105, h:25, alt:'STEP3', separate:false } } ) %><span class="c-step-list__heading-text">プランニング<br>お⾒積り</span></h3>
+						<h3 class="c-step-list__heading"><%- include( 'template-parts/_picture',{ global, img:{ src:'heading_step03', extns:'svg', w:105, h:25, alt:'STEP3', separate:false } } ) %><span class="c-step-list__heading-text">プランニング<br class="pc-only">お⾒積り</span></h3>
 						<div class="c-step-list__text">
 							<p>⼯事の⼤⼩にもよりますが、（1）平⾯図提案（2）仕上提案（3）⼨法詳細（4）施⼯プラン作成の4⼯程を<br>約2週毎に打ち合わせを⾏い、書式化します。※詳細のお⾒積もりは、お申し込み後のご提⽰となります。</p>
 						</div>
@@ -734,7 +736,7 @@ const baseMeta = {
 						<figure class="c-step-list__icon">
 							<%- include( 'template-parts/_picture',{ global, img:{ src:'ico_step04', extns:'svg', w:130, h:130, alt:'', separate:false } } ) %>
 						</figure>
-						<h3 class="c-step-list__heading"><%- include( 'template-parts/_picture',{ global, img:{ src:'heading_step04', extns:'svg', w:105, h:25, alt:'STEP4', separate:false } } ) %><span class="c-step-list__heading-text">プラン確定<br>ご契約</span></h3>
+						<h3 class="c-step-list__heading"><%- include( 'template-parts/_picture',{ global, img:{ src:'heading_step04', extns:'svg', w:105, h:25, alt:'STEP4', separate:false } } ) %><span class="c-step-list__heading-text">プラン確定<br class="pc-only">ご契約</span></h3>
 						<div class="c-step-list__text">
 							<p>プラン内容確定後、重要事項の説明を⾏い、ご契約となります。</p>
 						</div>

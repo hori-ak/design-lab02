@@ -38,6 +38,28 @@
         position: relative;
     }
 }
+.l-content-header-logo{
+    h1{
+       padding-left:1.5rem;
+       padding-right:1.5rem;
+    }
+    figure{
+        padding-right:1.5rem;
+        position: relative;
+        z-index: 10;
+    }
+}
+.is-open{
+    .l-content-header-logo{
+        background-color: rgba(255,255,255,0);
+        h1{
+            display: none;
+        }
+        figure{
+            display:none;
+        }
+    }
+}
 .l-footer{
     background-color:black;
     color:#fff;
@@ -82,24 +104,5 @@
     }
     @include g.mq(md){
 
-    }
-}
-.l-content-header-logo{
-    h1{
-       padding-left:1.5rem;
-       padding-right:1.5rem;
-    }
-    figure{
-        padding-right:1.5rem;
-    }
-
-    &.is-open{
-        background-color: rgba(255,255,255,0);
-        h1{
-            display: none;
-        }
-        figure{
-            display:none;
-        }
     }
 }
